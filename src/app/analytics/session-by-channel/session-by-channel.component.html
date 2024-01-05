@@ -1,0 +1,34 @@
+
+    <div class="d-flex justify-content-between align-items-center">
+        <div class="py-2">
+          <h6 class="mt-0 mb-1">Sessions By Channel</h6>
+          <p class="mb-0">This is Photoshop's version of Lorem Ipsum. Proin gravida nibjs</p>
+        </div>
+      </div>
+      <div class="table-responsive-md">
+      <table class="table table-md fnt-12 mt-1 table-fixed">
+        <thead>
+        <tr class="bg-light">
+                <th>Channel</th>
+                <th>Session</th>
+                <th>Previous Period</th>
+                <th>Change</th>
+                <th>Trande</th>
+        </tr>
+        </thead>
+    <tbody>
+        <tr *ngFor="let d of sessions | custompipe:6">
+            <td>{{d.channel}}</td>
+            <td>{{d.session}}</td>
+            <td>{{d.period}}</td>
+            <td>{{d.fees}}%</td>
+            <td><img src="{{d.change}}"></td>
+        </tr>
+    </tbody>
+    </table>
+    </div>
+    
+    
+    
+  
+  

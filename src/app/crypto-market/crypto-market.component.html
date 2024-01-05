@@ -1,0 +1,35 @@
+<div class="d-flex justify-content-between align-items-center">
+    <div class="py-2">
+      <h6 class="mt-0 mb-1">Crypto Market Position</h6>
+      <p class="mb-0">Market value and position of crypto currency</p>
+    </div>
+  </div>
+
+<div class="py-2 crypto-market-coins">
+  <owl-carousel [options]="carouselOptions" [items]="images" [carouselClasses]="['owl-theme', 'row','sliding']">
+      <div class="item" *ngFor="let image of images;let i= index">
+        <div class="slide-text">
+          <button type="button" class="btn btn-secondary custom-btn">{{image.text}}</button>
+        </div>
+      </div>
+    </owl-carousel>
+</div> 
+
+<table class="table table-md fnt-12 mt-1 mb-0" id="posi">
+  <thead>
+  <tr class="bg-light">
+          <th>Country</th>
+          <th>Crypto Value</th>
+          <th>Position</th>
+          <th>Volume</th>
+  </tr>
+  </thead>
+<tbody>
+  <tr *ngFor="let d of tabledata">
+      <td>{{d.country}}</td>
+      <td>{{d.value}}</td>
+      <td class="position-td">{{d.position}}</td>
+      <td>{{d.volume}}</td>
+      
+  </tr>
+</tbody>

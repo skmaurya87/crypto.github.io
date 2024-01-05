@@ -1,0 +1,97 @@
+
+    <div class="d-flex justify-content-between align-items-center">
+      <div class="py-2">
+        <h6 class="mt-0 mb-1">Current Orders</h6>
+        <p class="mb-0">This is Photoshop's version of Lorem Ipsum. Proin gravida nibjs</p>
+      </div>
+      <div class="py-2">
+        Short By: <p-dropdown class="btn-select-sm sort-by" [options]="sortby"></p-dropdown>
+      </div>
+    </div>
+    <hr class="my-1">
+    <div class="d-flex justify-content-between align-items-center flex-sm-wrap flex-wrap">
+         <div class="py-2">
+             <button type="button" class="btn btn-link btn-sm">All Transaction</button>
+             <button type="button" class="btn btn-link btn-sm">Processed</button>
+             <button type="button" class="btn btn-link btn-sm">Pending</button>
+             <button type="button" class="btn btn-link btn-sm">Deny Transaction</button>
+         </div>
+         <div class="py-2">
+             <button type="button" class="btn btn-link btn-sm"><i class="fa fa-file-excel-o"></i> Create Excel Sheet</button>
+             <button type="button" class="btn btn-link btn-sm"><i class="fa fa-pdf-o"></i> Download PDF</button>
+             <button type="button" class="btn btn-link btn-sm"><i class="fa fa-envelope-o"></i> Shared By Email</button>
+         </div>
+         </div>
+         <div class="table-responsive-md">      
+    <!-- <table class="table table-md fnt-12 mt-1 w-100 mb-0">
+      <thead>
+      <tr class="bg-light">
+              <th>Date</th>
+              <th>Type</th>
+              <th>TR. ID</th>
+              <th>Price Amount</th>
+              <th>Crypto Amount</th>
+              <th>Change</th>
+              <th>Order Fees</th>
+              <th class="text-right">Action</th>
+      </tr>
+      </thead>
+  <tbody>
+      <tr *ngFor="let d of tradehistroy">
+          <td>{{d.date}}</td>
+          <td>{{d.type}}</td>
+          <td>{{d.trID}}</td>
+          <td>{{d.price}}</td>
+          <td><img src="{{d.ico}}" style="width: 16px;" alt=""> {{d.amount}}</td>
+          <td><img src="{{d.change}}" alt=""></td>
+          <td>{{d.fees}}</td>
+          <td class="text-right">
+            <button type='button' class='btn btn-outline-secondary btn-xs'><i class='fa fa-eye'></i></button>
+            <button type='button' class='btn btn-outline-danger btn-xs'><i class='fa fa-trash-o'></i></button>
+          
+          </td>
+          
+      </tr>
+  </tbody>
+  </table> -->
+
+  <p-table class="table table-md fnt-12 mt-1 table-fixed" [value]="tradehistroy" [paginator]="true" [rows]="5" [pageLinks]="3" [rowsPerPageOptions]="[5,10,20]">
+    <ng-template pTemplate="header" class="bg-light">
+        <tr class="bg-light font-weight-500">
+          <th>Date</th>
+          <th>Type</th>
+          <th>TR. ID</th>
+          <th>Price Amount</th>
+          <th>Crypto Amount</th>
+          <th>Change</th>
+          <th>Order Fees</th>
+          <th class="text-right">Action</th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-sale>
+        <tr>
+            <td>{{sale.date}}</td>
+            <td>{{sale.type}}</td>
+            <td>{{sale.trID}}</td>
+            <td>{{sale.price}}</td>
+            <td><img src="{{sale.ico}}" style="width: 16px;" alt=""> {{sale.amount}}</td>
+            <td><img src="{{sale.change}}" alt=""></td>
+            <td>{{sale.fees}}</td>
+            <td class="text-right">
+              <button type='button' class='btn btn-outline-secondary btn-xs'><i class='fa fa-eye'></i></button>
+              <button type='button' class='btn btn-outline-danger btn-xs'><i class='fa fa-trash-o'></i></button>
+            
+            </td>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="summary">
+      Total {{tradehistroy?.length}} Rows
+  </ng-template>
+</p-table>
+
+  
+
+
+  </div>
+
+  

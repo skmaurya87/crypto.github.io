@@ -1,0 +1,70 @@
+<div class="container-fluid px-0">
+    <div class="row">
+      <div class="col-lg-3 col-md-6 col-sm-6 col-12 coins mt-3" *ngFor="let c of coins">
+    <div class="bg-white d-flex justify-content-between">
+      <div class="p-2">
+        <div class="media">
+          <span class="d-flex align-self-start mr-2 coin-circle text-white"><i class="fa {{c.icon}}"></i></span>
+           <div class="media-body">
+              <h6 class="mt-0">{{c.coin}}<small class="mt-1">{{c.sm}}</small></h6>
+            </div>
+          </div>
+          <p class="fnt-12 mb-0">{{c.txt}} <i class="fa {{c.upd}}"></i></p>
+        </div>
+        <div>
+         <img src="{{c.img}}" alt="" class="img-fluid">
+      </div>
+      </div>
+      </div>
+
+      <div class="row m-0 w-100 d-flex flex-wrap align-content-stretch">
+        <div class="col-md-8 col-sm-12 mt-3">
+          <div class="bg-white p-2 h-100">
+            <app-chart-rating></app-chart-rating>
+          </div>
+        </div>
+      <div class="col-md-4 col-sm-12 mt-3">
+          <div class="bg-white p-2 h-100">
+              <app-trade-table></app-trade-table>
+          </div>
+      </div>
+      </div>
+
+      <div class="row m-0 w-100 d-flex flex-wrap align-content-stretch">
+        <div class="col-md-6 col-sm-12 mt-3">
+          <div class="bg-white p-2 h-100">
+            <app-current-orders></app-current-orders>
+          </div>
+        </div>
+      <div class="col-md-6 col-sm-12 mt-3">
+          <div class="bg-white p-2 h-100">
+              <app-active-orders></app-active-orders>
+          </div>
+      </div>
+      </div>
+
+      <div class="row m-0 w-100 d-flex flex-wrap align-content-stretch">
+        <div class="col-md-12 col-sm-12 mt-3">
+          <div class="bg-white p-2 h-100">
+            <app-active-orders-full></app-active-orders-full>
+          </div>
+        </div>
+      </div>
+
+      <div class="row m-0 w-100 d-flex flex-wrap align-content-stretch">
+          <div class="col-md-8 col-sm-12 mt-3">
+            <div class="bg-white p-2 h-100">
+              <app-crypto-currency></app-crypto-currency>
+            </div>
+          </div>
+        <div class="col-md-4 col-sm-12 mt-3">
+            <div class="bg-white p-2 h-100">
+                <app-crypto-market></app-crypto-market>
+            </div>
+        </div>
+        </div>
+
+
+    </div>
+    </div>
+

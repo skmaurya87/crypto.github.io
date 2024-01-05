@@ -1,0 +1,52 @@
+          <div class="bg-white h-100 p-2">
+            <p class="font-weight-bolder">Third Party Form Validation</p>
+            <p-toast [style]="{marginTop: '80px'}"></p-toast>
+
+            <form [formGroup]="userform" (ngSubmit)="onSubmit(userform.value)">
+                <div class="form-row">
+                    <div class="form-group col-12">
+                        <label class="mb-0 font-weight-bolder">First Name *:</label>
+                        <input class="p-input form-control" minlength="3" pInputText type="text" formControlName="firstname" placeholder="Required"/>
+                        <p-message class="my-1" severity="error" text="Firstname is required" *ngIf="!userform.controls['firstname'].valid&&userform.controls['firstname'].dirty"></p-message>
+                      </div>
+             
+
+                <div class="form-group col-12">
+                    <label class="mb-0 font-weight-bolder">Last Name *:</label>
+                    <input class="p-input form-control" minlength="3" pInputText type="text" formControlName="lastname" placeholder="Required"/>
+                    <p-message severity="error" class="my-1" text="Lastname is required" *ngIf="!userform.controls['lastname'].valid&&userform.controls['lastname'].dirty"></p-message>
+                </div>
+
+                <div class="form-group col-12">
+                    <label class="mb-0 font-weight-bolder">Password *:</label>
+                    <input class="p-input form-control" pInputText type="password"  formControlName="password" placeholder="Required - Min(6)"/>
+                    <p-message severity="error" class="my-1" [text]="userform.controls['password'].errors['required'] ? 'Password is required' : userform.controls['password'].errors['minlength'] ? 'Must be longer than 6 characters' : ''" 
+                                    *ngIf="!userform.controls['password'].valid&&userform.controls['password'].dirty"></p-message>
+                </div>
+
+                <div class="form-group col-12">
+                    <label class="mb-0 font-weight-bolder"> Description:</label>
+                    <textarea pInputTextarea type="text" class="form-control" formControlName="description"></textarea>
+                </div>
+
+                <div class="form-group col-12">
+                    <label class="mb-0 font-weight-bolder">Gender *:</label>
+                    <p-dropdown [style]="{'display':'block'}" class="p-select" [options]="genders" formControlName="gender"></p-dropdown>
+                    <p-message severity="error" class="my-1" text="Gender is required" *ngIf="!userform.controls['gender'].valid&&userform.controls['gender'].dirty"></p-message>
+                </div>
+
+                <div class="form-group col-12">
+                    <button class="btn btn-primary mr-1" [disabled]="!userform.valid">Register</button>
+                    <button class="btn btn-secondary" type="reset" (click)="onReset()">Cancel</button>
+                </div>
+                </div>
+                <div style="text-align:center;margin-top:20px" *ngIf="submitted">
+                    Form Submitted
+                    <br>
+                    {{diagnostic}}
+                </div>
+            </form>
+            
+
+</div>
+

@@ -1,0 +1,30 @@
+
+    <div class="d-flex justify-content-between align-items-center">
+      <div class="py-2">
+        <h6 class="mt-0 mb-1">Trade History</h6>
+        <p class="mb-0">Real time trade information and rating data</p>
+      </div>
+      <div class="py-2">
+        <button type="button" class="btn btn-light btn-sm">View All</button>
+      </div>
+    </div>
+    <div class="table-responsive">
+    <table class="table table-md fnt-12 mt-1 table-fixed">
+      <thead>
+      <tr class="bg-light">
+              <th>Price</th>
+              <th>Amount</th>
+              <th>Date</th>
+      </tr>
+      </thead>
+  <tbody>
+      <tr *ngFor="let d of tradehistroy | custompipe:12 ">
+          <td>{{d.price}}</td>
+          <td><img src="{{d.ico}}" style="width: 16px;"> {{d.amount}}</td>
+          <td>{{d.date}}</td>
+      </tr>
+  </tbody>
+  </table>
+  </div>
+  
+

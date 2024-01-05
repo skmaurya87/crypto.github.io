@@ -1,0 +1,88 @@
+<div class="row m-0 mt-3 d-flex flex-wrap align-content-stretch">
+        <div class="col-md-4">
+            <div class="bg-white h-100 p-2">
+                  <h6>Social Media Followers</h6>
+                  <div class="mx-n2">
+                        <table class="social-widget">
+                            <tr>
+                            <td>
+                                <span class="social fb"><i class="fa fa-facebook-f text-white"></i></span>
+                                <span class="h6 mt-2 mb-0">98,275</span>
+                                <small class="text-secondary">Likes</small>
+                            </td>
+                            <td>
+                                <span class="social tw"><i class="fa fa-twitter text-white"></i></span>
+                                <span class="h6 mt-2 mb-0">12,125</span>
+                                <small class="text-secondary">Fallowers</small>
+                            </td>
+                            <td>
+                                <span class="social insta"><i class="fa fa-instagram text-white"></i></span>
+                                <span class="h6 mt-2 mb-0">7,236</span>
+                                <small class="text-secondary">Fallowers</small>
+                            </td>
+                        </tr>
+                        <tr>
+                                <td>
+                                        <span class="social gplus"><i class="fa fa-google-plus-g text-white"></i></span>
+                                        <span class="h6 mt-2 mb-0">10,321</span>
+                                        <small class="text-secondary">Fallowers</small>
+                                    </td>
+                                <td>
+                                        <span class="social youtub"><i class="fa fa-youtube-play text-white"></i></span>
+                                        <span class="h6 mt-2 mb-0">10,956</span>
+                                        <small class="text-secondary">Subscribers</small>
+                                    </td>
+                                <td>
+                                        <span class="social linkdin"><i class="fa fa-linkedin text-white"></i></span>
+                                        <span class="h6 mt-2 mb-0">8,325</span>
+                                        <small class="text-secondary">Fallowers</small>
+                                    </td>
+                        </tr>
+                        </table>               
+                </div>
+                          
+        </div>
+        </div>
+        <div class="col-md-8">
+            <div class="bg-white h-100 p-2">
+                    <div class="d-flex justify-content-between align-items-center">
+                            <div class="py-2">
+                                <h6 class="mt-0 mb-1">Social Media Conversation</h6>
+                                <p class="mb-0">This is Photoshop's version of Lorem Ipsum. Proin</p>
+                            </div>
+                            <div class="py-2">
+                                View: <p-dropdown class="btn-select-sm sort-by" [options]="viewdays"></p-dropdown>
+                                <button type="button" class="btn btn-outline-primary btn-sm ml-2">Add New</button>
+                            </div>
+                        </div>
+                        <!-- <div class="mx-n2"><hr class="my-2"></div> -->
+                        <div class="table-responsive-md">
+                        <table class="table table-md table-bordered mb-0">
+                            <thead>
+                                <tr class="bg-light">
+                                    <th>Source</th>
+                                    <th colspan="3">Conversation</th>
+                                    <th colspan="2">Sessions</th>
+                                    <th>Avg. Rate</th>
+                                </tr>
+                            </thead>
+                                <tbody>
+                                    <tr *ngFor="let d of conversation | custompipe:5">
+                                        <td>{{d.source}}</td>
+                                        <td style="width: 180px;">
+                                            <div class="progress" style="border-radius: 0px; height:8px; width: 100%;">
+                                            <div class="progress-bar" [ngStyle]="{'width.%': d.cv1}"></div>
+                                            </div>
+                                            </td>
+                                        <td>{{d.cv1}}</td>
+                                        <td>{{d.cv2}}</td>
+                                        <td>{{d.cv1}}</td>
+                                        <td>{{d.cv2}}</td>
+                                        <td>{{d.avg}}</td>
+                                    </tr>
+                                </tbody>
+                        </table>
+                    </div>
+            </div>
+        </div>
+    </div>

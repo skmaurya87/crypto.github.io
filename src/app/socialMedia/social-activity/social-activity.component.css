@@ -1,0 +1,5 @@
+.twitter{background-color: #3da4f1; color: #fff; border-radius: 4px; padding: 10px;}
+.linkdin{background-color: #0177b5; color: #fff; border-radius: 4px; padding: 10px;}
+.facebook{background-color: #3b5999; color: #fff; border-radius: 4px; padding: 10px;}
+.instagram{ background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%); color: #fff; border-radius: 4px; padding: 10px;}
+.social-widgit .fa-twitter, .social-widgit .fa-linkedin-square, .social-widgit .fa-facebook-official, .social-widgit .fa-instagram{opacity: .4;}

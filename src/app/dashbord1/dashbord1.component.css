@@ -1,0 +1,18 @@
+.news{padding-left:140px!important;position:relative;height:40px;white-space:nowrap;overflow:hidden}
+.news-hed{position:absolute;left:0;top:0;bottom:0;padding:.5em;z-index:9;width:120px}
+.news-hed::after{content:"";position:absolute;left:120px;top:0;bottom:0;border-bottom:solid 40px transparent;border-right:solid 40px transparent}
+@keyframes marquee {
+0%{text-indent:10%}
+100%{text-indent:-50%}
+}
+@-webkit-keyframes marquee {
+0%{text-indent:10%}
+100%{text-indent:-50%}
+}
+.coins{height: 40px;}
+.marquee{overflow:hidden;white-space:nowrap;animation:marquee 20s linear infinite;-webkit-animation:marquee 20s linear infinite;width:100%}
+.marquee:hover{-webkit-animation-play-state:paused;animation-play-state:paused}
+
+@media(max-width:768px){
+    .coins{height: auto; flex-wrap: wrap;}
+}

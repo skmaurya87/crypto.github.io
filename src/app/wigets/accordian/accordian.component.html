@@ -1,0 +1,74 @@
+<div class="row m-0 w-100 d-flex flex-wrap align-content-stretch">
+        <div class="col-md-6 mb-3">
+                <div class="bg-white h-100 p-2">
+                        <h6>Single Open</h6>
+                        <div id="accordion2" role="tablist">
+                                <div class="card" *ngFor="let item of items">
+                                  <div class="card-header accordinLink" role="tab">
+                                      <a href="javascript:void(0)">
+                                       {{item.heading}}
+                                      </a>
+                                  </div>
+                                  <div class="collapse">
+                                    <div class="card-body">
+                                      {{item.body}}
+                                    </div>
+                                  </div>
+                                </div>
+                              </div> 
+                            <hr>
+                        <h6>Multiple Open</h6>
+                        <div id="accordion" role="tablist">
+                                <div class="card" *ngFor="let item of items; let i = index">
+                                  <div class="card-header" role="tab">
+                                      <a data-toggle="collapse" href="#collapse{{i}}" aria-expanded="false" aria-controls="collapseOne">
+                                       {{item.heading}}
+                                      </a>
+                                  </div>
+                              
+                                  <div id="collapse{{i}}" class="collapse" role="tabpanel" aria-labelledby="headingOne">
+                                    <div class="card-body">
+                                      {{item.body}}
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>                  
+                            <hr>          
+                    </div>
+                    </div>   
+                    <div class="col-md-6 mb-3">
+                            <div class="bg-white h-100 p-2">
+                                <h6>Third Party Accordian</h6>
+                                <p-accordion>
+                                        <p-accordionTab *ngFor="let item of items; let i = index" [selected]="i == 0">
+                                            <p-header>{{item.heading}}</p-header>
+                                                {{item.body}}
+                                        </p-accordionTab>
+                                    </p-accordion>  
+                                    <h6 class="mt-3">Third Party Tab Panel</h6>
+                <!-- <p-tabView>
+                        <p-tabPanel [header]="item.heading" *ngFor="let item of items; let i = index" [selected]="i == 0">
+                            {{item.body}}
+                        </p-tabPanel>
+                    </p-tabView> -->
+
+                    <p-tabView>
+                      <p-tabPanel header="Godfather I" leftIcon="pi pi-calendar">
+                          The story begins as Don Vito Corleone, the head of a New York Mafia family, overseeshis daughter's wedding. His beloved son ichael has just come home from the war, but does not intend to become part of his father's business. T hrough Michael's life the nature of the family business becomes clear. The business of the family is just like the head of the family, kind and benevolent to those who give respect, but given to ruthless violence whenever anything stands against the good of the family.
+                      </p-tabPanel>
+                      <p-tabPanel header="Godfather II" leftIcon="pi pi-inbox">
+                          Francis Ford Coppola's legendary continuation and sequel to his landmark 1972 film, The_Godfather parallels the young Vito Corleone's rise with his son Michael's spiritual fall, deepening The_Godfather's depiction of the dark side of the American dream. In the early 1900s, the child Vito flees his Sicilian village for America after the local Mafia kills his family. Vito struggles to make a living, legally or illegally, for his wife and growing brood in Little Italy, killing the local Black Hand Fanucci after he demands his customary cut of the tyro's business. With Fanucci gone, Vito's communal stature grows.
+                      </p-tabPanel>
+                      <p-tabPanel header="Godfather III" leftIcon="pi pi-user" rightIcon="pi pi-star">
+                          After a break of more than  15 years, director Francis Ford Coppola and writer Mario Puzo returned to the well for this third and final story of the fictional Corleone crime family. Two decades have passed, and crime kingpin Michael Corleone, now divorced from his wife Kay has nearly succeeded in keeping his promise that his family would one day be completely legitimate.
+                      </p-tabPanel>
+                  </p-tabView>
+
+</div>
+</div>
+
+                    </div>
+
+
+
+                  

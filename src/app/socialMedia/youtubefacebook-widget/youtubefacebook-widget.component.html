@@ -1,0 +1,66 @@
+<div class="row m-0 w-100 d-flex flex-wrap align-content-stretch">
+        <div class="col-md-6">
+            <div class="bg-white p-2 mt-3 h-100">
+                    <div class="d-flex justify-content-between align-items-center">
+                            <div class="py-2">
+                              <h6 class="mt-0 mb-2">Youtube Subscribers</h6>
+                              <h5 class="real-data mr-4"><small>Total Subscriber</small>485,452</h5>
+                              <h5 class="real-data mr-4"><small>New Subscriber</small>95,705</h5>
+                              <h5 class="real-data mr-4"><small>Unsubscribed</small>7,253</h5>
+                            </div>
+                            <div class="py-2">
+                        View: <p-dropdown class="btn-select-sm sort-by" [options]="viewdays"></p-dropdown></div>
+                          </div>
+                          <highcharts-chart
+                          [Highcharts] = "highcharts" 
+                          [options] = "chartOptions" 
+                          style = "width: 100%; height: 300px; display: block;">
+                        </highcharts-chart>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="bg-white p-2 mt-3 h-100">
+                    <div class="d-flex justify-content-between align-items-center">
+                            <div>
+                              <h6 class="mb-3 mt-2">Faceboomk Engaged Users and Page Impression</h6>
+                            </div>
+                          
+            </div>
+            <div class="mx-n2"><hr class="mt-0 mb-2"></div>
+            <div class="d-flex justify-content-between align-items-center">
+                    <div class="py-2">
+                      <p class="fnt-12 font-weight-bolder m-0">Jan 25, 2019 To Feb 28, 2019</p>
+                      <p class="fnt-12  text-secondary m-0">Jan 01, 2019 To Jan 24, 2019 (prev)</p>
+                      <p class="my-3 font-weight-bolder">Facebook Page: <p-dropdown [style]="{'width':'130px'}" class="bitcoin-select btn-select-sm sort-by" [options]="page"></p-dropdown></p>
+                    </div>
+                    <div class="py-2">
+                View: <p-dropdown class="btn-select-sm sort-by" [options]="viewdays"></p-dropdown></div>
+                  </div>
+<div class="d-flex justify-content-between">
+  <div class="w-50">
+    <h6 class="mb-1">Engaged Users</h6>
+    <h6 class="mb-1 font-weight-bolder text-primary">17,178</h6>
+    <p class="fnt-13"><i class="fa fa-arrow-up text-success"></i> 2.75% <br>
+    <small class="text-secondary">VS 16,641 (prev)</small></p>
+      <highcharts-chart
+      [Highcharts] = "highcharts" 
+      [options] = "chartOptions1" 
+      style = "width: 100%; height: 150px; display: block;">
+   </highcharts-chart>
+  </div>
+  <div class="w-50">
+      <h6 class="mb-1">Page Impression</h6>
+      <h6 class="mb-1 font-weight-bolder text-primary">6,879,475</h6>
+      <p class="fnt-13"><i class="fa fa-arrow-up text-success"></i> 2.75% <br>
+      <small class="text-secondary">VS 16,641 (prev)</small></p>
+    <highcharts-chart
+    [Highcharts] = "highcharts" 
+    [options] = "chartOptions2" 
+    style = "width: 100%; height: 150px; display: block;">
+ </highcharts-chart>
+</div>
+</div>
+
+
+        </div>
+    </div>

@@ -1,0 +1,64 @@
+<div class="row m-0 w-100 d-flex flex-wrap align-content-stretch">
+        <div class="col-md-12 mb-3">
+                <div class="bg-white h-100 p-2">
+                <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+                        <ol class="carousel-indicators">
+                        <li data-target="#carouselExampleCaptions" *ngFor="let n of images let i = index" [attr.data-slide-to]="i" [ngClass]="{'active': i == 0}"></li>
+                        </ol>
+                        <div class="carousel-inner" role="listbox" id="myDIV">
+                        <div class="carousel-item" *ngFor="let d of images; let x = index"  [ngClass]="{'active': x == 0}">
+                        <img class="d-block w-100" src="{{d.img}}" alt="{{d.img}}">
+                        <div class="carousel-caption d-none d-md-block">
+                        <h3>{{d.title1}}</h3>
+                        <p>{{d.subtittle}}</p>
+                        <a href="{{d.link}}" target="_new" class="btn btn-light">Read More</a>
+                        </div>
+                        </div>
+                        </div>
+                        <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                        </a>
+                </div>
+        </div>
+       </div>
+
+        <div class="col-md-12 mb-3">
+                <div class="bg-white h-100 p-2">
+                        
+                        <div id="carouselExampleCaptions1" class="carousel slide" data-ride="carousel">
+                                <div class="carousel-inner" role="listbox" id="myDIV">
+                                <div class="carousel-item" *ngFor="let d of images  | custompipe:5 let x = index"  [ngClass]="{'active': x == 0}">
+                                <img class="d-block w-100" src="{{d.img}}" alt="{{d.img}}">
+                                <div class="carousel-caption d-none d-md-block">
+                                 <div class="container text-left">
+                                <h3>{{d.title1}}</h3>
+                                <p>{{d.subtittle}}</p>
+                                <a href="{{d.link}}" target="_new" class="btn btn-light">Read More</a>
+                                </div>
+                                </div>
+                                </div>
+                                </div>
+                                <a class="carousel-control-prev" href="#carouselExampleCaptions1" role="button" data-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Previous</span>
+                                </a>
+                                <a class="carousel-control-next" href="#carouselExampleCaptions1" role="button" data-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Next</span>
+                                </a>
+
+                                <ol class="thumb-indicators carousel-indicators">
+                                                <li data-target="#carouselExampleCaptions1" *ngFor="let n2 of images  | custompipe:5 let i = index" [attr.data-slide-to]="i" [ngClass]="{'active': i == 0}">
+                                                  <img src="{{n2.img}}" alt="">
+                                                </li>
+                                              </ol>
+                        </div>
+                </div>
+       </div>
+</div>       
+

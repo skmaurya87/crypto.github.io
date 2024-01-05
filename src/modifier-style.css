@@ -1,0 +1,82 @@
+img{zoom: 80%}
+
+/* You can add global styles to this file, and also import other style files */
+body{font-family: 'Roboto', sans-serif; font-size: 13px}
+.report-wrapper{display:flex;width:100%;align-items:stretch;}
+.left-sidebar{min-width:230px;max-width:230px;transition:all .3s; min-height: 100vh; position: relative;}
+.left-sidebar.active{margin-left:-230px}
+.main-content{width:100%;transition:all .3s;min-height: 100vh; overflow-x: hidden;}
+.relative{position: relative;}
+.fnt-10{font-size: 10px;}
+.fnt-10{font-size: 10px;}
+.fnt-11{font-size: 11px;}
+.fnt-12{font-size: 12px;}
+.fnt-13{font-size: 13px;}
+.fnt-14{font-size: 14px;}
+.fnt-15{font-size: 15px;}
+.fnt-16{font-size: 16px;}
+div[class^="col-"] {padding-left: 10px; padding-right: 10px;}
+.container-fluid, .container{padding-left: 10px; padding-right: 10px;}
+.col{padding-left: 10px; padding-right: 10px;}
+.row{margin-left: -10px; margin-right: -10px;}
+.btn-group-sm>.btn, .btn-sm{font-size: .7rem;}
+.btn-group-xs>.btn, .btn-xs {padding: .1rem .25rem;font-size: .7rem; margin-right: .25rem}
+a.active.focus,a.active:focus,a.focus,a:active.focus,a:active:focus,a:focus,button.active.focus,button.active:focus,button.focus,button:active.focus,button:active:focus,button:focus,.btn.active.focus,.btn.active:focus,.btn.focus,.btn:active.focus,.btn:active:focus,.btn:focus{outline:0;outline-color:transparent;outline-width:0;outline-style:none;box-shadow:0 0 0 0 rgba(0,123,255,0)}
+.bitcoin-select .ui-dropdown {min-width: 105px; border:none;}
+.bitcoin-select .ui-inputtext, .bitcoin-select .pi{font-size: 11px;}
+.table-md td, .table-md th {padding: .5rem;}
+.table thead th{font-weight: 500;}
+.btn-select-sm .ui-dropdown, .btn-select-sm .ui-inputtext {font-size: 13px; padding: .1em; }
+.sort-by .ui-dropdown{min-width: 100px;}
+.table-fixed{table-layout: fixed;}
+.crypto-market-coins .owl-nav{display: flex;justify-content: space-between; margin-top: -30px; margin-left: -40px;
+    margin-right: -40px;}
+.crypto-market-coins .owl-nav .owl-prev, .crypto-market-coins .owl-nav .owl-next{width: 30px;height: 30px;border-radius: 0;}
+.crypto-market-coins .owl-carousel{width: auto;}
+b, strong{font-weight: 700;}
+.select .ui-dropdown label.ui-dropdown-label{font-size: 13px;}
+
+::-webkit-scrollbar {width: 8px; height: 8px;}
+::-webkit-scrollbar-track {border-radius: 4px;}
+::-webkit-scrollbar-thumb {border-radius: 4px;}
+.font-weight-bolder{font-weight: 500 !important;}
+.real-data{float: left; font-size: 17px;}
+.real-data>small{display: block; font-size: 60%; margin-bottom: .25rem}
+.custom-control-label::after {top: .1rem; left: 0;}
+.custom-control-label::before {top: .1rem; left: 0;}
+.custom-control-label{padding-left: 1.25rem;}
+.form-control:focus { box-shadow: none;}
+.p-input .ui-calendar{display: block;}
+.table .ui-paginator .ui-dropdown{height: auto;}
+.table .ui-table .ui-table-summary {float: left;background-color: transparent;border: none;padding: 1em .7em;}
+.p-input .ui-inputtext{display: block;width: 100%;height: calc(1.5em + .75rem + 2px);padding: .375rem .75rem;
+    font-size: .9rem;font-weight: 400;line-height: 1.5;background-clip: padding-box;border-radius: .25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;}
+.p-input-sm .ui-inputtext{height: calc(1.5em + .5rem + 2px);padding: .25rem .5rem; font-size: .875rem;
+        line-height: 1.5;border-radius: .2rem;}
+.p-input-lg .ui-inputtext{height: calc(1.5em + 1rem + 2px);padding: .5rem 1rem;font-size: 1.25rem;line-height: 1.5;
+    border-radius: .3rem;}
+.p-input .ui-calendar-w-btn{display: flex;align-items: stretch;flex-wrap: nowrap;} 
+.p-input .ui-datepicker-trigger.ui-button{height: 35px;}   
+.p-input-sm .ui-datepicker-trigger.ui-button{height: 31px;}   
+.p-input-lg .ui-datepicker-trigger.ui-button{height: 48px;}   
+.typehed{width: 100%; display: flex; align-items: stretch; height: 35px;}
+.typehed-sm{width: 100%; display: flex; align-items: stretch; height: 30px;}
+.typehed input{width: 100%;}
+
+
+
+
+
+
+@media (max-width:575.98px) {
+.table-responsive-sm .table, .table .ui-table table  {min-width: 600px}}
+@media (max-width:767.98px) {
+.table-responsive-md .table, .table .ui-table table {min-width: 800px}}
+@media (max-width:991.98px) {
+.left-sidebar{margin-left:-230px; position: absolute; z-index: 99;}
+.left-sidebar.active{margin-left:0px}
+.table-responsive-lg  .table, .table .ui-table table  {min-width: 1000px}}
+@media (max-width:1199.98px) {
+.table-responsive-xl .table, .table .ui-table table  {min-width: 1200px}}
+

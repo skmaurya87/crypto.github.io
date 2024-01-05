@@ -1,0 +1,65 @@
+ [
+  {
+    "id": 1,
+    "img": "assets/images/banner1.jpg",
+    "title1" : "One Lorem Ipsum is simply dummy text of ",
+    "subtittle" : "One Contrary to popular belief, Lorem Ipsum is not simply random",
+    "link" : "https://www.vectorstock.com/"
+  },
+  {
+    "id": 1,
+    "img": "assets/images/banner2.jpg",
+    "title1" : "Two Lorem Ipsum is simply dummy text of ",
+    "subtittle" : "Two Contrary to popular belief, Lorem Ipsum is not simply random",
+    "link" : "https://www.crunchbase.com/"
+  },
+  {
+    "id": 1,
+    "img": "assets/images/banner3.jpg",
+    "title1" : "Three Lorem Ipsum is simply dummy text of ",
+    "subtittle" : "Three Contrary to popular belief, Lorem Ipsum is not simply random",
+    "link" : "https://www.shutterstock.com/"
+  },
+  {
+    "id": 1,
+    "img": "assets/images/banner4.jpg",
+    "title1" : "Four Lorem Ipsum is simply dummy text of ",
+    "subtittle" : "Four Contrary to popular belief, Lorem Ipsum is not simply random",
+    "link" : "https://www.freepik.com/"
+  },
+  {
+    "id": 1,
+    "img": "assets/images/banner5.jpg",
+    "title1" : "Five Lorem Ipsum is simply dummy text of ",
+    "subtittle" : "Five Contrary to popular belief, Lorem Ipsum is not simply random",
+    "link" : "https://www.imagesbazaar.com/"
+  },
+  {
+    "id": 1,
+    "img": "assets/images/banner6.jpg",
+    "title1" : "Six Lorem Ipsum is simply dummy text of ",
+    "subtittle" : "Six Contrary to popular belief, Lorem Ipsum is not simply random",
+    "link" : "https://www.pexels.com/"
+  },
+  {
+    "id": 1,
+    "img": "assets/images/banner7.jpg",
+    "title1" : "Seven Lorem Ipsum is simply dummy text of ",
+    "subtittle" : "Seven Contrary to popular belief, Lorem Ipsum is not simply random",
+    "link" : "http://mypari.in/"
+  },
+  {
+    "id": 1,
+    "img": "assets/images/banner8.jpg",
+    "title1" : "Eight Lorem Ipsum is simply dummy text of ",
+    "subtittle" : "Eight Contrary to popular belief, Lorem Ipsum is not simply random",
+    "link" : "https://aajtak.intoday.in/"
+  },
+  {
+    "id": 1,
+    "img": "assets/images/banner9.jpg",
+    "title1" : "Nine Lorem Ipsum is simply dummy text of ",
+    "subtittle" : "Nine Contrary to popular belief, Lorem Ipsum is not simply random",
+    "link" : "https://navbharattimes.indiatimes.com/"
+  }
+]

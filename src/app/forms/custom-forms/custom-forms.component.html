@@ -1,0 +1,109 @@
+<div class="row m-0 w-100 d-flex flex-wrap align-content-stretch">
+        <div class="col-md-4 mb-3">
+                <div class="bg-white h-100 p-2">
+                    <p class="font-weight-bolder">Select Picker</p>
+                    <p class="fnt-13 mb-0">Basic</p> 
+                    <p-dropdown [options]="cities" [style]="{'display':'block'}" [(ngModel)]="selectedCity" placeholder="Select a City" optionLabel="name" class="p-select"></p-dropdown>
+                    
+                    <p class="fnt-13 mt-3 mb-0">Select With Search</p> 
+                    <p-dropdown [options]="cars" [style]="{'display':'block'}" [(ngModel)]="selectedCar" filter="true" placeholder="Select a Car" class="p-select"></p-dropdown>
+
+
+                    <p class="fnt-13 mb-0 mt-3">Select with icon</p>            
+                    <p-dropdown class="p-select" [options]="SelectCoins" [(ngModel)]="selectedCar2"  [style]="{'display':'block'}"> 
+                            <ng-template let-CoinIcon pTemplate="selectedItem" class="p-select">
+                                <img src="../../assets/images/{{CoinIcon.label}}.png" style="width:16px;vertical-align:middle" />
+                                <span style="vertical-align:middle; margin-left: .5em">{{CoinIcon.label}}</span>
+                            </ng-template>
+                            <ng-template let-SelectCoins pTemplate="item" class="p-select">
+                                <div class="ui-helper-clearfix" style="position: relative;height: 16px;">
+                                    <img src="../../assets/images/{{SelectCoins.label}}.png" style="width:18px;position:absolute;top:1px;left:5px"/>
+                                    <div style="font-size:11px; margin-left: 25px; margin-top:1px">{{SelectCoins.label}}</div>
+                                </div>
+                            </ng-template>
+                        </p-dropdown>
+
+                        <p class="fnt-13 mb-0 mt-3">Multi Select</p>
+                        <p-multiSelect [options]="cities1" [(ngModel)]="selectedCities1"  [style]="{'display':'block'}"></p-multiSelect>
+                </div>
+                    </div>
+
+        <div class="col-md-4 mb-3">
+            <div class="bg-white h-100 p-2">
+            <app-typehead></app-typehead>
+
+                </div>
+                </div>
+
+        <div class="col-md-4 mb-3">
+            <div class="bg-white h-100 p-2">
+                <p class="font-weight-bolder">Calendar</p>
+                <p class="fnt-13 mb-0">Basic</p>
+                <p-calendar [(ngModel)]="date1" class="p-input"></p-calendar>
+
+                <p class="fnt-13 mt-3 mb-0">Spanish</p>
+                <p-calendar [(ngModel)]="date2" [locale]="es" class="p-input" dateFormat="dd/mm/yy"></p-calendar>
+
+                <p class="fnt-13 mt-3 mb-0">Icon</p>
+                <p-calendar [(ngModel)]="date3" class="p-input" [showIcon]="true"></p-calendar>
+
+                <p class="fnt-13 mt-3 mb-0">Min-Max</p>
+                <p-calendar [(ngModel)]="date4" [minDate]="minDate" class="p-input" [maxDate]="maxDate" [readonlyInput]="true"></p-calendar>
+                </div>
+                </div>
+
+        <div class="col-md-4 mb-3">
+            <div class="bg-white h-100 p-2">
+                <p class="font-weight-bolder">Calendar</p>
+                <p class="fnt-13 mb-0">Disable Days</p>
+                <p-calendar [(ngModel)]="date5" [disabledDates]="invalidDates" class="p-input"  [disabledDays]="[0,6]" [readonlyInput]="true"></p-calendar>
+
+                <p class="fnt-13 mt-3 mb-0">Navigators</p>
+                <p-calendar [(ngModel)]="date6" [monthNavigator]="true" [yearNavigator]="true"  class="p-input" yearRange="2000:2030"></p-calendar>
+
+                <p class="fnt-13 mt-3 mb-0">Time</p>
+                <p-calendar [(ngModel)]="date7" [showTime]="true"  class="p-input"></p-calendar>
+
+                <p class="fnt-13 mt-3 mb-0">Time Only</p>
+                <p-calendar [(ngModel)]="date8" [timeOnly]="true" class="p-input"></p-calendar>
+                </div>
+                </div>
+
+        <div class="col-md-4 mb-3">
+            <div class="bg-white h-100 p-2">
+                <p class="font-weight-bolder">Calendar</p>
+                <p class="fnt-13 mb-0">Multiple</p>
+                <p-calendar [(ngModel)]="dates" selectionMode="multiple" [readonlyInput]="true" class="p-input"></p-calendar>
+
+                <p class="fnt-13 mt-3 mb-0">Range</p>
+                <p-calendar [(ngModel)]="rangeDates" selectionMode="range" [readonlyInput]="true" class="p-input"></p-calendar>
+
+                <p class="fnt-13 mt-3 mb-0">Button bar</p>
+                <p-calendar [(ngModel)]="date9" showButtonBar="true" class="p-input"></p-calendar>
+
+                <p class="fnt-13 mt-3 mb-0">Date Template</p>
+                <p-calendar [(ngModel)]="date10"  class="p-input">
+                        <ng-template pTemplate="date" let-date>
+                            <span [ngStyle]="{backgroundColor: (date.day < 30 && date.day > 15) ? '#81C784' : 'inherit'}" style="border-radius:50%;padding: .25em;width: 1.75em; height:1.75em; display:block;">{{date.day}}</span>
+                        </ng-template>
+                    </p-calendar>
+                </div>
+                </div>
+
+        <div class="col-md-4 mb-3">
+            <div class="bg-white h-100 p-2">
+                <p class="font-weight-bolder">Calendar</p>
+                <p class="fnt-13 mb-0">Multiple Months</p>
+                <p-calendar [(ngModel)]="date11" [numberOfMonths]="3" class="p-input"></p-calendar>
+
+                <p class="fnt-13 mt-3 mb-0">Month Picker</p>
+                <p-calendar [(ngModel)]="date12" view="month" dateFormat="mm/yy" [yearNavigator]="true" yearRange="2000:2030" [readonlyInput]="true" class="p-input"></p-calendar>
+
+                <p class="fnt-13 mt-3 mb-0">Touch UI</p>
+                <p-calendar [(ngModel)]="date13" [touchUI]="true" [readonlyInput]="true" class="p-input"></p-calendar>
+                </div>
+                </div>
+
+        
+
+</div>
